@@ -6,7 +6,7 @@ A fun strategic game where you defend your towers from waves of enemies by buyin
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Tower Defense</title>
 
   <style>
@@ -32,6 +32,19 @@ A fun strategic game where you defend your towers from waves of enemies by buyin
     align-items: center;
     z-index: 110;
     transition: opacity 0.2s ease;
+}
+canvas {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain; /* Prevents stretching or squishing */
+    margin: auto;
+    display: block;
+}
+.game-container {
+    aspect-ratio: 16 / 9; /* Change to 9 / 16 for vertical mobile games */
+    width: 100%;
+    max-width: 800px;    /* Lock the maximum width */
+    margin: 0 auto;      /* Center it horizontally */
 }
 
 #difficulty-screen {
